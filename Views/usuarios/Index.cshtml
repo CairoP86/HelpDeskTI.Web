@@ -1,0 +1,62 @@
+﻿@model IEnumerable<HelpDeskTI.Web.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">👥 Gestión de Usuarios</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Apellido 1</th>
+                        <th>Apellido 2</th>
+                        <th>Rol</th>
+                        <th style="width: 140px;">Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var u in Model)
+                    {
+                        <tr>
+                            <td>@u.Cedula</td>
+                            <td>@u.Nombre</td>
+                            <td>@u.Apellido1</td>
+                            <td>@u.Apellido2</td>
+
+                            <td>
+                                @if (u.Rol == "TI")
+                                {
+                                    <span class="badge bg-primary">TI</span>
+                                }
+                                else if (u.Rol == "Tecnico")
+                                {
+                                    <span class="badge bg-success">Técnico</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Empleado</span>
+                                }
+                            </td>
+
+                            <td>
+                                <a class="btn btn-sm btn-outline-primary">Editar</a>
+                                <a class="btn btn-sm btn-outline-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>

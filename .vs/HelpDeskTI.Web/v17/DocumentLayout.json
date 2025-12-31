@@ -1,0 +1,402 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\tiquetes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\tiquetes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\models\\tiquete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:models\\tiquete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\software\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\software\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\notificaciones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\notificaciones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\departamentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\departamentos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\computadoras\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\computadoras\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\notificacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\notificacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\departamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\departamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\softwarecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\softwarecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\computadorascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\computadorascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\tiquetescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\tiquetescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|c:\\users\\capl1\\source\\repos\\helpdeskti.web\\helpdeskti.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{75CDA300-3024-414A-AD49-924B0B337BFE}|HelpDeskTI.Web.csproj|solutionrelative:helpdeskti.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tiquete.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Models\\Tiquete.cs",
+              "RelativeDocumentMoniker": "Models\\Tiquete.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Models\\Tiquete.cs",
+              "RelativeToolTip": "Models\\Tiquete.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:48:10.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Computadoras\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Computadoras\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Computadoras\\Index.cshtml",
+              "RelativeToolTip": "Views\\Computadoras\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T01:40:01.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SoftwareController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\SoftwareController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SoftwareController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\SoftwareController.cs",
+              "RelativeToolTip": "Controllers\\SoftwareController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:34:51.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ComputadorasController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\ComputadorasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ComputadorasController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\ComputadorasController.cs",
+              "RelativeToolTip": "Controllers\\ComputadorasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:34:36.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAYwGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T21:57:42.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Software\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Software\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Software\\Index.cshtml",
+              "RelativeToolTip": "Views\\Software\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T01:40:34.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Tiquetes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tiquetes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Tiquetes\\Index.cshtml",
+              "RelativeToolTip": "Views\\Tiquetes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T01:38:39.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\usuarios\\Index.cshtml",
+              "RelativeToolTip": "Views\\usuarios\\Index.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T01:39:29.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T21:43:32.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:50:17.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:34:18.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Notificaciones\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Notificaciones\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Notificaciones\\Index.cshtml",
+              "RelativeToolTip": "Views\\Notificaciones\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T01:41:26.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DepartamentosController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\DepartamentosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartamentosController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\DepartamentosController.cs",
+              "RelativeToolTip": "Controllers\\DepartamentosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:35:07.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NotificacionesController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\NotificacionesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotificacionesController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\NotificacionesController.cs",
+              "RelativeToolTip": "Controllers\\NotificacionesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:35:23.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Departamentos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Departamentos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Departamentos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Departamentos\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T01:41:03.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T20:48:26.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TiquetesController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\TiquetesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TiquetesController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\TiquetesController.cs",
+              "RelativeToolTip": "Controllers\\TiquetesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T01:33:55.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-30T22:06:19.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T21:23:13.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T21:12:21.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAADwv1gAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T20:40:30.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HelpDeskTI.Web",
+              "DocumentMoniker": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\HelpDeskTI.Web.csproj",
+              "RelativeDocumentMoniker": "HelpDeskTI.Web.csproj",
+              "ToolTip": "C:\\Users\\capl1\\source\\repos\\HelpDeskTI.Web\\HelpDeskTI.Web.csproj",
+              "RelativeToolTip": "HelpDeskTI.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-30T23:47:27.877Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

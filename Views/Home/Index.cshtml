@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="container mt-4">
+
+    <!-- BIENVENIDA -->
+    <div class="mb-4">
+        <h1>Panel principal</h1>
+        <p class="text-muted">
+            Bienvenido al sistema de Soporte TI
+        </p>
+        <p>
+            <strong>Usuario:</strong> @Context.Session.GetString("NombreUsuario") <br />
+            <strong>Rol:</strong> @Context.Session.GetString("Rol")
+        </p>
+    </div>
+
+    <!-- TARJETAS -->
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Tiquetes Totales</h5>
+                    <h2 class="card-text">25</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Pendientes</h5>
+                    <h2 class="card-text">8</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Completados</h5>
+                    <h2 class="card-text">14</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Urgentes</h5>
+                    <h2 class="card-text">3</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ACCESOS RÁPIDOS -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h4>Accesos rápidos</h4>
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-outline-primary w-100 mb-2"
+               asp-controller="Tiquetes" asp-action="Index">
+                Ver Tiquetes
+            </a>
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-outline-secondary w-100 mb-2"
+               asp-controller="Usuarios" asp-action="Index">
+                Usuarios
+            </a>
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-outline-success w-100 mb-2"
+               asp-controller="Computadoras" asp-action="Index">
+                Computadoras
+            </a>
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-outline-dark w-100 mb-2"
+               asp-controller="Software" asp-action="Index">
+                Software
+            </a>
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-outline-warning w-100 mb-2"
+               asp-controller="Departamentos" asp-action="Index">
+                Departamentos
+            </a>
+        </div>
+    </div>
+
+</div>
