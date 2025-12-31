@@ -14,13 +14,14 @@ namespace HelpDeskTI.Web.Controllers
             _configuration = configuration;
         }
 
+        // =========================================
+        // LISTADO DE USUARIOS
         // GET: /Usuarios
+        // =========================================
         public IActionResult Index()
         {
-            // Lista que vamos a enviar a la vista
             List<Usuario> usuarios = new List<Usuario>();
 
-            // Cadena de conexión
             string connectionString = _configuration.GetConnectionString("SoporteTI");
 
             using (SqlConnection cn = new SqlConnection(connectionString))
@@ -47,8 +48,38 @@ namespace HelpDeskTI.Web.Controllers
                 }
             }
 
-            // Enviamos la lista a la vista
             return View(usuarios);
+        }
+
+        // =========================================
+        // NUEVO USUARIO (SOLO VISTA)
+        // GET: /Usuarios/Nuevo
+        // =========================================
+        public IActionResult Nuevo()
+        {
+            return View();
+        }
+
+        public IActionResult Editar(string id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
+
+        public IActionResult Eliminar(string id)
+        {
+            return View();
+        }
+
+
+
+        // =========================================
+        // DETALLE DE USUARIO (SOLO VISTA)
+        // GET: /Usuarios/Detalle
+        // =========================================
+        public IActionResult Detalle()
+        {
+            return View();
         }
     }
 }

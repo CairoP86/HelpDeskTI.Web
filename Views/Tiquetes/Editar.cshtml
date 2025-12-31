@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Editar Tiquete";
+}
+
+<h2 class="fw-bold mb-3">Editar tiquete</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <div class="mb-3">
+            <label class="form-label">Asunto</label>
+            <input class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Estado</label>
+                <select class="form-select">
+                    <option>Pendiente</option>
+                    <option>En proceso</option>
+                    <option>Completado</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Prioridad</label>
+                <select class="form-select">
+                    <option>Alta</option>
+                    <option>Media</option>
+                    <option>Baja</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="text-end">
+            <a class="btn btn-secondary">Cancelar</a>
+            <button class="btn btn-primary">Guardar cambios</button>
+        </div>
+    </div>
+</div>

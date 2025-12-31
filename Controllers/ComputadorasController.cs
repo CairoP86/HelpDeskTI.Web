@@ -8,5 +8,16 @@ namespace HelpDeskTI.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Nuevo()
+        {
+            return View();
+        }
+
+        public IActionResult Detalle(int id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
     }
 }

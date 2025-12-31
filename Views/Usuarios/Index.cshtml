@@ -1,0 +1,118 @@
+﻿@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<!-- ENCABEZADO -->
+<div class="mb-4">
+    <h2 class="fw-bold mb-0">Usuarios</h2>
+    <small class="text-muted">Gestión de usuarios del sistema</small>
+</div>
+
+<!-- BARRA SUPERIOR -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="text-muted">
+        Total de usuarios: <strong>3</strong>
+    </div>
+
+    <a asp-controller="Usuarios"
+       asp-action="Nuevo"
+       class="btn btn-primary">
+        + Nuevo usuario
+    </a>
+</div>
+
+<!-- TABLA -->
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Rol</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>801300225</td>
+                        <td>Cairo</td>
+                        <td>Pérez López</td>
+                        <td>
+                            <span class="badge bg-danger">TI</span>
+                        </td>
+                        <td class="text-center">
+                            <a asp-controller="Usuarios"
+                               asp-action="Editar"
+                               asp-route-id="801300225"
+                               class="btn btn-sm btn-outline-secondary me-1">
+                                ✏️ Editar
+                            </a>
+
+                            <a asp-controller="Usuarios"
+                               asp-action="Eliminar"
+                               asp-route-id="801300225"
+                               class="btn btn-sm btn-outline-danger">
+                                🗑 Eliminar
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>0101010001</td>
+                        <td>Carlos</td>
+                        <td>Méndez López</td>
+                        <td>
+                            <span class="badge bg-primary">Empleado</span>
+                        </td>
+                        <td class="text-center">
+                            <a asp-controller="Usuarios"
+                               asp-action="Editar"
+                               asp-route-id="0101010001"
+                               class="btn btn-sm btn-outline-secondary me-1">
+                                ✏️ Editar
+                            </a>
+
+                            <a asp-controller="Usuarios"
+                               asp-action="Eliminar"
+                               asp-route-id="0101010001"
+                               class="btn btn-sm btn-outline-danger">
+                                🗑 Eliminar
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>0202020002</td>
+                        <td>Ana</td>
+                        <td>Jiménez Rojas</td>
+                        <td>
+                            <span class="badge bg-success">Técnico</span>
+                        </td>
+                        <td class="text-center">
+                            <a asp-controller="Usuarios"
+                               asp-action="Editar"
+                               asp-route-id="0202020002"
+                               class="btn btn-sm btn-outline-secondary me-1">
+                                ✏️ Editar
+                            </a>
+
+                            <a asp-controller="Usuarios"
+                               asp-action="Eliminar"
+                               asp-route-id="0202020002"
+                               class="btn btn-sm btn-outline-danger">
+                                🗑 Eliminar
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

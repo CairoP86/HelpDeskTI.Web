@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Nueva Computadora";
+}
+
+<div class="mb-4">
+    <h2 class="fw-bold mb-0">Nueva computadora</h2>
+    <small class="text-muted">Registrar un nuevo equipo</small>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Activo</label>
+                <input class="form-control" placeholder="PC-005">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Usuario asignado</label>
+                <input class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Marca</label>
+                <input class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Modelo</label>
+                <input class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Estado</label>
+                <select class="form-select">
+                    <option>Operativa</option>
+                    <option>Mantenimiento</option>
+                    <option>Disponible</option>
+                    <option>Fuera de servicio</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end gap-2">
+            <a asp-controller="Computadoras"
+               asp-action="Index"
+               class="btn btn-outline-secondary">
+                Cancelar
+            </a>
+
+            <button class="btn btn-primary">
+                Guardar
+            </button>
+        </div>
+    </div>
+</div>

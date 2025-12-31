@@ -1,9 +1,55 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    <h1>Módulo de Tiquetes</h1>
-    <p>Aquí se mostrarán los tiquetes</p>
-
-
+﻿@{
+    ViewData["Title"] = "Tiquetes";
 }
+
+<!-- ENCABEZADO -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-0">Tiquetes</h2>
+        <small class="text-muted">Gestión de solicitudes de soporte</small>
+    </div>
+
+    <a asp-controller="Tiquetes"
+       asp-action="Nuevo"
+       class="btn btn-primary">
+        + Nuevo tiquete
+    </a>
+</div>
+
+<!-- TABLA -->
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Usuario</th>
+                    <th>Asunto</th>
+                    <th>Estado</th>
+                    <th>Prioridad</th>
+                    <th>Fecha</th>
+                    <th class="text-end">Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1023</td>
+                    <td>Cairo Pérez</td>
+                    <td>No enciende la laptop</td>
+                    <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                    <td><span class="badge bg-danger">Alta</span></td>
+                    <td>22/09/2025</td>
+                    <td class="text-end">
+                        <a asp-controller="Tiquetes"
+                           asp-action="Detalle"
+                           asp-route-id="1023"
+                           class="btn btn-sm btn-outline-primary">
+                            Ver
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

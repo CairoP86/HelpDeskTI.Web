@@ -8,5 +8,21 @@ namespace HelpDeskTI.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Nuevo()
+        {
+            return View();
+        }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
+
+        public IActionResult Detalle()
+        {
+            return View();
+        }
     }
+
 }

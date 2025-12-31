@@ -1,8 +1,36 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    <h1>Módulo Usuarios</h1>
-    <p>En construcción</p>
-
+﻿@{
+    ViewData["Title"] = "Notificaciones";
 }
+
+<!-- ENCABEZADO -->
+<div class="mb-4">
+    <h2 class="fw-bold mb-0">Notificaciones</h2>
+    <small class="text-muted">Alertas y eventos del sistema</small>
+</div>
+
+<!-- RESUMEN -->
+<p class="text-muted mb-3">
+    Total de notificaciones: <strong>3</strong>
+</p>
+
+<!-- LISTA -->
+<div class="card shadow-sm">
+    <div class="list-group list-group-flush">
+
+        <div class="list-group-item">
+            <strong>Nuevo tiquete creado</strong>
+            <div class="text-muted small">Hace 5 minutos</div>
+        </div>
+
+        <div class="list-group-item">
+            <strong>Tiquete #1023 marcado como urgente</strong>
+            <div class="text-muted small">Hace 1 hora</div>
+        </div>
+
+        <div class="list-group-item">
+            <strong>Equipo enviado a mantenimiento</strong>
+            <div class="text-muted small">Ayer</div>
+        </div>
+
+    </div>
+</div>

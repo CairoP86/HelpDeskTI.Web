@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Detalle Tiquete";
+}
+
+<h2 class="fw-bold mb-3">Tiquete #@ViewBag.Id</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <p><strong>Usuario:</strong> Cairo Pérez</p>
+        <p>
+            <strong>Estado:</strong>
+            <span class="badge bg-warning text-dark">Pendiente</span>
+        </p>
+        <p>
+            <strong>Prioridad:</strong>
+            <span class="badge bg-danger">Alta</span>
+        </p>
+        <p><strong>Fecha:</strong> 22/09/2025</p>
+
+        <hr>
+
+        <p><strong>Descripción</strong></p>
+        <p>No enciende la laptop desde ayer.</p>
+
+        <div class="text-end">
+            <a asp-controller="Tiquetes"
+               asp-action="Index"
+               class="btn btn-outline-secondary">
+                Volver
+            </a>
+        </div>
+    </div>
+</div>
