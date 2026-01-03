@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null; // Login SIN layout (correcto)
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Login - HelpDeskTI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light">
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+        <div class="card shadow-sm" style="width: 380px;">
+            <div class="card-body">
+
+                <h4 class="text-center mb-4">Iniciar Sesión</h4>
+
+                <form asp-controller="Auth" asp-action="Login" method="post">
+
+                    <div class="mb-3">
+                        <label class="form-label">Cédula</label>
+                        <input type="text"
+                               name="cedula"
+                               class="form-control"
+                               required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               name="clave"
+                               class="form-control"
+                               required />
+                    </div>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger text-center">
+                            @ViewBag.Error
+                        </div>
+                    }
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Ingresar
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

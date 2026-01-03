@@ -1,43 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Eliminar Usuario";
+    ViewData["Title"] = "Eliminar usuario";
 }
 
-<!-- ENCABEZADO -->
-<div class="mb-4">
-    <h2 class="fw-bold text-danger mb-0">Eliminar usuario</h2>
-    <small class="text-muted">Esta acción no se puede deshacer</small>
-</div>
+<h2>Eliminar usuario</h2>
 
-<div class="card shadow-sm border-danger">
-    <div class="card-body">
+<p>¿Seguro que deseas eliminar al usuario <strong>@ViewBag.Cedula</strong>?</p>
 
-        <div class="alert alert-warning">
-            <strong>⚠ Atención:</strong> Está a punto de eliminar el siguiente usuario.
-        </div>
+<form asp-action="ConfirmarEliminar" method="post">
+    <input type="hidden" name="cedula" value="@ViewBag.Cedula" />
 
-        <ul class="list-group mb-4">
-            <li class="list-group-item">
-                <strong>Cédula:</strong> 801300225
-            </li>
-            <li class="list-group-item">
-                <strong>Nombre:</strong> Cairo Pérez López
-            </li>
-            <li class="list-group-item">
-                <strong>Rol:</strong> TI
-            </li>
-        </ul>
-
-        <div class="d-flex justify-content-end gap-2">
-            <a asp-controller="Usuarios"
-               asp-action="Index"
-               class="btn btn-outline-secondary">
-                Cancelar
-            </a>
-
-            <button class="btn btn-danger">
-                🗑 Eliminar usuario
-            </button>
-        </div>
-
-    </div>
-</div>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    <button class="btn btn-danger">Eliminar</button>
+</form>

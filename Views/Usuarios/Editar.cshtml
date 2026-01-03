@@ -1,46 +1,37 @@
-﻿
-<!-- MISMO FORMULARIO QUE NUEVO -->
-@{
-    ViewData["Title"] = "Editar Usuario";
-}
+﻿@model HelpDeskTI.Web.Models.Usuario
 
-<h2 class="fw-bold mb-3">Nuevo usuario</h2>
+<h2>Editar usuario</h2>
 
-<div class="card shadow-sm">
-    <div class="card-body">
+<form asp-action="Editar" method="post" class="card p-4 shadow-sm">
 
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Cédula</label>
-                <input class="form-control">
-            </div>
+    <input asp-for="Cedula" type="hidden" />
 
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Rol</label>
-                <select class="form-select">
-                    <option>Empleado</option>
-                    <option>Técnico</option>
-                    <option>TI</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Nombre</label>
-                <input class="form-control">
-            </div>
-
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Apellidos</label>
-                <input class="form-control">
-            </div>
-        </div>
-
-        <div class="text-end">
-            <a class="btn btn-secondary">Cancelar</a>
-            <button class="btn btn-primary">Guardar</button>
-        </div>
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
     </div>
-</div>
 
+    <div class="mb-3">
+        <label>Apellido 1</label>
+        <input asp-for="Apellido1" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Apellido 2</label>
+        <input asp-for="Apellido2" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Rol</label>
+        <select asp-for="Rol" class="form-select">
+            <option>Empleado</option>
+            <option>Tecnico</option>
+            <option>TI</option>
+        </select>
+    </div>
+
+    <div class="text-end">
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        <button class="btn btn-primary">Guardar cambios</button>
+    </div>
+</form>

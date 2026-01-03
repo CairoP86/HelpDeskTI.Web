@@ -1,28 +1,19 @@
-using System.Diagnostics;
-using HelpDeskTI.Web.Models;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data.SqlClient;
 
 namespace HelpDeskTI.Web.Controllers
 {
+    [Authorize] // 🔐 protege TODO el controlador
     public class HomeController : Controller
     {
         public IActionResult Index()
         {
-            if (HttpContext.Session.GetString("Usuario") == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
-            ViewBag.Usuario = HttpContext.Session.GetString("Usuario");
-            ViewBag.Rol = HttpContext.Session.GetString("Rol");
-
-            ViewBag.Usuario = HttpContext.Session.GetString("Usuario");
-
             return View();
         }
 
-
-
-
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
 }

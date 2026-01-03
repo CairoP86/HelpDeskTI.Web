@@ -1,19 +1,20 @@
-﻿@{
+﻿@model List<HelpDeskTI.Web.Models.Software>
+
+@{
     ViewData["Title"] = "Software";
 }
 
 <!-- ENCABEZADO -->
 <div class="mb-4">
     <h2 class="fw-bold mb-0">Software</h2>
-    <small class="text-muted">Licencias y aplicaciones instaladas</small>
+    <small class="text-muted">Licencias y aplicaciones registradas</small>
 </div>
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <div class="text-muted">
-        Total de aplicaciones: <strong>2</strong>
+        Total de software: <strong>@Model.Count</strong>
     </div>
 
-    <!-- NUEVO SOFTWARE -->
     <a class="btn btn-primary"
        asp-controller="Software"
        asp-action="Nuevo">
@@ -21,7 +22,6 @@
     </a>
 </div>
 
-<!-- TABLA -->
 <div class="card shadow-sm">
     <div class="card-body p-0">
         <div class="table-responsive">
@@ -29,59 +29,35 @@
                 <thead class="table-light">
                     <tr>
                         <th>Nombre</th>
-                        <th>Tipo</th>
-                        <th>Licencia</th>
-                        <th>Estado</th>
-                        <th class="text-end">Acciones</th>
+                        <th>Versión</th>
+                        <th>Tipo licencia</th>
+                        <th>Stock</th>
+                        <th>Instaladas</th>
                     </tr>
                 </thead>
 
                 <tbody>
-
-                    <!-- FILA 1 -->
-                    <tr>
-                        <td>Microsoft Office</td>
-                        <td>Productividad</td>
-                        <td>Activa</td>
-                        <td>
-                            <span class="badge bg-success">Disponible</span>
-                        </td>
-                        <td class="text-end">
-
-                            <a class="btn btn-sm btn-outline-primary me-1"
-                               asp-controller="Software"
-                               asp-action="Detalle">
-                                Ver
-                            </a>
-
-                            <a class="btn btn-sm btn-outline-secondary"
-                               asp-controller="Software"
-                               asp-action="Editar">
-                                Editar
-                            </a>
-
-                        </td>
-                    </tr>
-
-                    <!-- FILA 2 -->
-                    <tr>
-                        <td>Adobe Photoshop</td>
-                        <td>Diseño</td>
-                        <td>Expirada</td>
-                        <td>
-                            <span class="badge bg-danger">No disponible</span>
-                        </td>
-                        <td class="text-end">
-
-                            <a class="btn btn-sm btn-outline-primary"
-                               asp-controller="Software"
-                               asp-action="Detalle">
-                                Ver
-                            </a>
-
-                        </td>
-                    </tr>
-
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">
+                                No hay software registrado
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (var s in Model)
+                        {
+                            <tr>
+                                <td>@s.Nombre</td>
+                                <td>@s.Version</td>
+                                <td>@s.TipoLicencia</td>
+                                <td>@s.StockLicencias</td>
+                                <td>@s.LicenciasInstaladas</td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
         </div>

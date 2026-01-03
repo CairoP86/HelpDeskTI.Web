@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HelpDeskTI.Web.Models.Departamento
+
+@{
     ViewData["Title"] = "Nuevo Departamento";
 }
 
@@ -7,21 +9,45 @@
 <div class="card shadow-sm">
     <div class="card-body">
 
-        <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input class="form-control">
-        </div>
+        <form asp-controller="Departamentos" asp-action="Nuevo" method="post">
 
-        <div class="mb-3">
-            <label class="form-label">Encargado</label>
-            <select class="form-select">
-                <option>Seleccionar usuario</option>
-            </select>
-        </div>
+            <!-- NOMBRE -->
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input class="form-control"
+                       name="Nombre"
+                       required />
+            </div>
 
-        <div class="text-end">
-            <a class="btn btn-secondary">Cancelar</a>
-            <button class="btn btn-primary">Guardar</button>
-        </div>
+            <!-- ENCARGADO -->
+            <div class="mb-3">
+                <label class="form-label">Encargado</label>
+                <select class="form-select"
+                        name="CedulaEncargado">
+                    <option value="">Seleccionar usuario</option>
+
+                    @* Lista cargada desde el controller *@
+                    @foreach (var u in ViewBag.Usuarios as List<HelpDeskTI.Web.Models.Usuario>)
+                    {
+                        <option value="@u.Cedula">
+                            @u.Nombre @u.Apellido1
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="text-end">
+                <a asp-controller="Departamentos"
+                   asp-action="Index"
+                   class="btn btn-outline-secondary">
+                    Cancelar
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                    Guardar
+                </button>
+            </div>
+
+        </form>
     </div>
 </div>

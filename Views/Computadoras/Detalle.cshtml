@@ -1,24 +1,33 @@
-﻿@{
+﻿@model HelpDeskTI.Web.Models.Computadora
+
+@{
     ViewData["Title"] = "Detalle Computadora";
 }
 
-<h2 class="fw-bold mb-3">Equipo #@ViewBag.Id</h2>
+<h2 class="fw-bold mb-3">
+    Equipo: @Model.CodigoActivo
+</h2>
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <p><strong>Activo:</strong> PC-001</p>
-        <p><strong>Usuario:</strong> Cairo Pérez</p>
-        <p><strong>Marca:</strong> Dell</p>
-        <p><strong>Modelo:</strong> Latitude 5420</p>
-        <p>
-            <strong>Estado:</strong>
-            <span class="badge bg-success">Operativa</span>
-        </p>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bold">Marca:</div>
+            <div class="col-sm-8">@Model.Marca</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bold">Modelo:</div>
+            <div class="col-sm-8">@Model.Modelo</div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 fw-bold">Serie:</div>
+            <div class="col-sm-8">@Model.Serie</div>
+        </div>
 
         <div class="text-end">
-            <a asp-controller="Computadoras"
-               asp-action="Index"
-               class="btn btn-outline-secondary">
+            <a asp-action="Index" class="btn btn-outline-secondary">
                 Volver
             </a>
         </div>
