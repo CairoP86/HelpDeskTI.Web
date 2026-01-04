@@ -1,0 +1,33 @@
+﻿@model List<dynamic>
+
+<h3>Historial de asignaciones de software</h3>
+
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Software</th>
+            <th>Equipo</th>
+            <th>Acción</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var h in Model)
+        {
+            <tr>
+                <td>@h.Software</td>
+                <td>@h.CodigoActivo</td>
+                <td>
+                    <span class="badge @(h.Accion == "ASIGNADO" ? "bg-success" : "bg-danger")">
+                        @h.Accion
+                    </span>
+                </td>
+                <td>@h.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">
+    Volver
+</a>

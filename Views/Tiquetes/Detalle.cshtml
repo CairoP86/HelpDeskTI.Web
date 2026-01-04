@@ -1,33 +1,120 @@
-﻿@{
+﻿@model HelpDeskTI.Web.Models.Tiquete
+
+@{
     ViewData["Title"] = "Detalle Tiquete";
 }
 
-<h2 class="fw-bold mb-3">Tiquete #@ViewBag.Id</h2>
+<h2 class="fw-bold mb-3">
+    Tiquete #@Model.IdTiquete
+</h2>
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <p><strong>Usuario:</strong> Cairo Pérez</p>
+
+        <p><strong>Creado por:</strong> @Model.NombreCreador</p>
+
         <p>
             <strong>Estado:</strong>
-            <span class="badge bg-warning text-dark">Pendiente</span>
+            @if (Model.Estado == "Abierto")
+            {
+                <span class="badge bg-danger">Abierto</span>
+            }
+            else if (Model.Estado == "En Proceso")
+            {
+                <span class="badge bg-warning text-dark">En Proceso</span>
+            }
+            else
+            {
+                <span class="badge bg-success">Cerrado</span>
+            }
         </p>
+
         <p>
             <strong>Prioridad:</strong>
-            <span class="badge bg-danger">Alta</span>
+            @if (Model.Prioridad == "Alta")
+            {
+                <span class="badge bg-danger">Alta</span>
+            }
+            else if (Model.Prioridad == "Media")
+            {
+                <span class="badge bg-warning text-dark">Media</span>
+            }
+            else
+            {
+                <span class="badge bg-secondary">Baja</span>
+            }
         </p>
-        <p><strong>Fecha:</strong> 22/09/2025</p>
 
-        <hr>
+        <p>
+            <strong>Fecha:</strong>
+            @Model.FechaCreacion.ToString("dd/MM/yyyy HH:mm")
+        </p>
+
+        <hr />
 
         <p><strong>Descripción</strong></p>
-        <p>No enciende la laptop desde ayer.</p>
+        <p>@Model.Descripcion</p>
 
-        <div class="text-end">
-            <a asp-controller="Tiquetes"
-               asp-action="Index"
-               class="btn btn-outline-secondary">
+        <hr />
+
+        <!-- ================= ADMIN ================= -->
+        @if (User.IsInRole("Admin"))
+        {
+            <h5 class="mt-4">Asignar técnico</h5>
+
+            <form asp-action="AsignarTecnico" method="post" class="row g-2">
+                <input type="hidden" name="idTiquete" value="@Model.IdTiquete" />
+
+                <div class="col-md-8">
+                    <select name="cedulaTecnico" class="form-select" required>
+                        <option value="">Seleccione técnico</option>
+                        @foreach (var t in (List<Usuario>)ViewBag.Tecnicos)
+                        {
+                            <option value="@t.Cedula"
+                                    selected="@(Model.CedulaTecnico == t.Cedula)">
+                                @t.Nombre
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <button class="btn btn-primary w-100">
+                        Asignar
+                    </button>
+                </div>
+            </form>
+        }
+
+        <!-- ================= TECNICO / ADMIN ================= -->
+        @if (User.IsInRole("Tecnico") || User.IsInRole("Admin"))
+        {
+            <h5 class="mt-4">Cambiar estado</h5>
+
+            <form asp-action="CambiarEstado" method="post" class="row g-2">
+                <input type="hidden" name="idTiquete" value="@Model.IdTiquete" />
+
+                <div class="col-md-8">
+                    <select name="estado" class="form-select">
+                        <option selected="@("Abierto" == Model.Estado)">Abierto</option>
+                        <option selected="@("En Proceso" == Model.Estado)">En Proceso</option>
+                        <option selected="@("Cerrado" == Model.Estado)">Cerrado</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <button class="btn btn-success w-100">
+                        Actualizar
+                    </button>
+                </div>
+            </form>
+        }
+
+        <div class="text-end mt-4">
+            <a asp-action="Index" class="btn btn-outline-secondary">
                 Volver
             </a>
         </div>
+
     </div>
 </div>

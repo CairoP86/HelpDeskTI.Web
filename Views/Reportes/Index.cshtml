@@ -1,0 +1,228 @@
+﻿@using System.Data
+
+@{
+    ViewData["Title"] = "Reportes del sistema";
+}
+
+<h2 class="mb-4">📊 Reportes del sistema</h2>
+
+<!-- ================= SELECTOR ================= -->
+<div class="mb-4">
+    <label class="form-label fw-bold">Seleccionar reporte</label>
+    <select id="selectorReporte" class="form-select">
+        <option value="todos">Todos</option>
+        <option value="estado">Tiquetes por estado</option>
+        <option value="prioridad">Tiquetes por prioridad</option>
+        <option value="mes">Tiquetes por mes</option>
+        <option value="tecnico">Pendientes por técnico</option>
+        <option value="usuarios">Usuarios</option>
+        <option value="computadoras">Computadoras</option>
+        <option value="software">Software</option>
+    </select>
+</div>
+
+<!-- ================= TIQUETES ================= -->
+<div data-reporte="estado">
+    <h4>Tiquetes por estado</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Estado</th><th>Total</th></tr>
+        @foreach (DataRow r in ((DataTable)ViewBag.TiquetesPorEstado).Rows)
+        {
+            <tr>
+                <td>@r["Estado"]</td>
+                <td>@r["Total"]</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div data-reporte="prioridad">
+    <h4>Tiquetes por prioridad</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Prioridad</th><th>Total</th></tr>
+        @foreach (DataRow r in ((DataTable)ViewBag.TiquetesPorPrioridad).Rows)
+        {
+            <tr>
+                <td>@r["Prioridad"]</td>
+                <td>@r["Total"]</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div data-reporte="mes">
+    <h4>Tiquetes por mes</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Mes</th><th>Total</th></tr>
+        @foreach (DataRow r in ((DataTable)ViewBag.TiquetesPorMes).Rows)
+        {
+            <tr>
+                <td>@r["Mes"]</td>
+                <td>@r["Total"]</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div data-reporte="tecnico">
+    <h4>Tiquetes pendientes por técnico</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Técnico</th><th>Pendientes</th></tr>
+
+        @if (ViewBag.PendientesPorTecnico != null &&
+                ((DataTable)ViewBag.PendientesPorTecnico).Rows.Count > 0)
+        {
+            foreach (DataRow r in ((DataTable)ViewBag.PendientesPorTecnico).Rows)
+            {
+                <tr>
+                    <td>@r["Tecnico"]</td>
+                    <td>@r["Pendientes"]</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="2">No hay pendientes</td></tr>
+        }
+    </table>
+
+    <p>
+        <strong>Tiempo promedio de resolución:</strong>
+        @ViewBag.TiempoPromedioResolucion horas
+    </p>
+</div>
+
+<hr />
+
+<!-- ================= USUARIOS ================= -->
+<div data-reporte="usuarios">
+    <h4>Usuarios creados en el último mes</h4>
+    <p>
+        <strong>
+            @(((DataTable)ViewBag.UsuariosUltimoMes).Rows[0]["Total"])
+        </strong>
+    </p>
+
+    <h4>Últimos usuarios registrados</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Nombre</th><th>Fecha</th></tr>
+        @foreach (DataRow r in ((DataTable)ViewBag.UltimosUsuarios).Rows)
+        {
+            <tr>
+                <td>@r["Nombre"] @r["Apellido1"]</td>
+                <td>@Convert.ToDateTime(r["FechaCreacion"]).ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </table>
+
+    <h4>Usuarios inactivos</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Nombre</th><th>Rol</th></tr>
+
+        @if (ViewBag.UsuariosInactivos != null &&
+                ((DataTable)ViewBag.UsuariosInactivos).Rows.Count > 0)
+        {
+            foreach (DataRow r in ((DataTable)ViewBag.UsuariosInactivos).Rows)
+            {
+                <tr>
+                    <td>@r["Nombre"] @r["Apellido1"]</td>
+                    <td>@r["Rol"]</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="2">Todos los usuarios están activos</td></tr>
+        }
+    </table>
+</div>
+
+<hr />
+
+<!-- ================= COMPUTADORAS ================= -->
+<div data-reporte="computadoras">
+    <h4>Computadoras sin asignar</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Código</th><th>Marca</th><th>Modelo</th></tr>
+
+        @if (((DataTable)ViewBag.ComputadorasSinAsignar).Rows.Count > 0)
+        {
+            foreach (DataRow r in ((DataTable)ViewBag.ComputadorasSinAsignar).Rows)
+            {
+                <tr>
+                    <td>@r["CodigoActivo"]</td>
+                    <td>@r["Marca"]</td>
+                    <td>@r["Modelo"]</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="3">Todas las computadoras están asignadas</td></tr>
+        }
+    </table>
+</div>
+
+<hr />
+
+<!-- ================= SOFTWARE ================= -->
+<div data-reporte="software">
+    <h4>Software sin licencias disponibles</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Nombre</th><th>Versión</th></tr>
+
+        @if (((DataTable)ViewBag.SoftwareAgotado).Rows.Count > 0)
+        {
+            foreach (DataRow r in ((DataTable)ViewBag.SoftwareAgotado).Rows)
+            {
+                <tr>
+                    <td>@r["Nombre"]</td>
+                    <td>@r["Version"]</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="2">No hay software agotado</td></tr>
+        }
+    </table>
+
+    <h4>Software por agotarse (≤ 3 licencias)</h4>
+    <table class="table table-sm table-bordered">
+        <tr><th>Nombre</th><th>Versión</th><th>Disponibles</th></tr>
+
+        @if (((DataTable)ViewBag.SoftwarePorAgotarse).Rows.Count > 0)
+        {
+            foreach (DataRow r in ((DataTable)ViewBag.SoftwarePorAgotarse).Rows)
+            {
+                <tr>
+                    <td>@r["Nombre"]</td>
+                    <td>@r["Version"]</td>
+                    <td>@r["Disponibles"]</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="3">Todo el software tiene stock suficiente</td></tr>
+        }
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        const selector = document.getElementById("selectorReporte");
+        const bloques = document.querySelectorAll("[data-reporte]");
+
+        selector.addEventListener("change", function () {
+            const valor = this.value;
+
+            bloques.forEach(b => {
+                b.style.display =
+                    (valor === "todos" || b.dataset.reporte === valor)
+                    ? "block"
+                    : "none";
+            });
+        });
+    </script>
+}

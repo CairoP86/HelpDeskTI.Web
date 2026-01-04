@@ -1,48 +1,34 @@
 ﻿@model HelpDeskTI.Web.Models.Tiquete
 
-@{
-    ViewData["Title"] = "Nuevo Tiquete";
-}
+<h2>Nuevo tiquete</h2>
 
-<h2 class="fw-bold mb-3">Nuevo Tiquete</h2>
-
-<form asp-action="Nuevo" method="post">
-    @Html.AntiForgeryToken()
+<form asp-action="Nuevo" method="post" class="card p-4 shadow-sm">
 
     <div class="mb-3">
-        <label asp-for="Titulo" class="form-label"></label>
-        <input asp-for="Titulo" class="form-control" />
-        <span asp-validation-for="Titulo" class="text-danger"></span>
+        <label class="form-label">Título</label>
+        <input asp-for="Titulo" class="form-control" required />
     </div>
 
     <div class="mb-3">
-        <label asp-for="Descripcion" class="form-label"></label>
-        <textarea asp-for="Descripcion" class="form-control" rows="4"></textarea>
-        <span asp-validation-for="Descripcion" class="text-danger"></span>
+        <label class="form-label">Descripción</label>
+        <textarea asp-for="Descripcion"
+                  class="form-control"
+                  rows="4"
+                  required></textarea>
     </div>
 
-    <div class="mb-4">
-        <label asp-for="Prioridad" class="form-label"></label>
+    <div class="mb-3">
+        <label class="form-label">Prioridad</label>
         <select asp-for="Prioridad" class="form-select">
-            <option value="">Seleccione prioridad</option>
             <option value="Baja">Baja</option>
-            <option value="Media">Media</option>
+            <option value="Media" selected>Media</option>
             <option value="Alta">Alta</option>
         </select>
-        <span asp-validation-for="Prioridad" class="text-danger"></span>
     </div>
 
-    <div class="d-flex justify-content-end gap-2">
-        <a asp-action="Index" class="btn btn-outline-secondary">
-            Cancelar
-        </a>
-
-        <button type="submit" class="btn btn-primary">
-            Guardar
-        </button>
+    <div class="text-end">
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        <button class="btn btn-primary">Crear tiquete</button>
     </div>
+
 </form>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}

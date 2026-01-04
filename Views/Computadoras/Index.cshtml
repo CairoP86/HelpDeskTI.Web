@@ -7,17 +7,17 @@
 <h1 class="mb-1">Computadoras</h1>
 <p class="text-muted mb-4">Equipos registrados en la empresa</p>
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <div class="text-muted">
-        Total de equipos: <strong>@Model.Count</strong>
+@* BOTÓN NUEVA COMPUTADORA (SOLO ADMIN / TÉCNICO) *@
+@if (User.IsInRole("Admin") || User.IsInRole("Tecnico"))
+{
+    <div class="mb-3 text-end">
+        <a asp-controller="Computadoras"
+           asp-action="Nuevo"
+           class="btn btn-primary">
+            + Nueva computadora
+        </a>
     </div>
-
-    <a asp-controller="Computadoras"
-       asp-action="Nuevo"
-       class="btn btn-primary">
-        + Nueva computadora
-    </a>
-</div>
+}
 
 <div class="card">
     <div class="card-body p-0">
@@ -28,15 +28,16 @@
                     <th>Marca</th>
                     <th>Modelo</th>
                     <th>Serie</th>
+                    <th>Usuario</th>
                     <th class="text-end">Acciones</th>
                 </tr>
             </thead>
 
             <tbody>
-                @if (!Model.Any())
+                @if (Model.Count == 0)
                 {
                     <tr>
-                        <td colspan="5" class="text-center text-muted py-4">
+                        <td colspan="6" class="text-center text-muted py-4">
                             No hay computadoras registradas
                         </td>
                     </tr>
@@ -50,6 +51,18 @@
                             <td>@c.Marca</td>
                             <td>@c.Modelo</td>
                             <td>@(string.IsNullOrEmpty(c.Serie) ? "—" : c.Serie)</td>
+
+                            <td>
+                                @if (string.IsNullOrEmpty(c.NombreUsuarioAsignado))
+                                {
+                                    <span class="text-muted">Sin asignar</span>
+                                }
+                                else
+                                {
+                                    @c.NombreUsuarioAsignado
+                                }
+                            </td>
+
                             <td class="text-end">
                                 <a class="btn btn-sm btn-outline-primary"
                                    asp-controller="Computadoras"

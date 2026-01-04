@@ -1,35 +1,47 @@
-﻿@{
+﻿@model HelpDeskTI.Web.Models.Software
+
+@{
     ViewData["Title"] = "Nuevo Software";
 }
 
 <h2 class="fw-bold mb-3">Nuevo software</h2>
 
-<div class="card shadow-sm">
-    <div class="card-body">
+<form asp-action="Nuevo" method="post">
+    @Html.AntiForgeryToken()
 
-        <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input class="form-control">
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Tipo</label>
-                <input class="form-control">
-            </div>
-
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Licencia</label>
-                <select class="form-select">
-                    <option>Activa</option>
-                    <option>Expirada</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="text-end">
-            <a class="btn btn-secondary">Cancelar</a>
-            <button class="btn btn-primary">Guardar</button>
-        </div>
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
-</div>
+
+    <div class="mb-3">
+        <label asp-for="Version" class="form-label"></label>
+        <input asp-for="Version" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TipoLicencia" class="form-label"></label>
+        <select asp-for="TipoLicencia" class="form-select">
+            <option value="">Seleccione</option>
+            <option>Perpetua</option>
+            <option>Anual</option>
+            <option>Mensual</option>
+        </select>
+        <span asp-validation-for="TipoLicencia" class="text-danger"></span>
+    </div>
+
+    <div class="mb-4">
+        <label asp-for="StockLicencias" class="form-label"></label>
+        <input asp-for="StockLicencias" type="number" class="form-control" />
+    </div>
+
+    <div class="d-flex justify-content-end gap-2">
+        <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

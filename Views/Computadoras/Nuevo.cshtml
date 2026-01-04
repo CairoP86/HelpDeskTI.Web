@@ -1,79 +1,52 @@
-﻿@model HelpDeskTI.Web.Models.Computadora
+﻿<form asp-controller="Computadoras" asp-action="Nuevo" method="post">
+    @Html.AntiForgeryToken()
 
-@{
-    ViewData["Title"] = "Nueva Computadora";
-}
+    <div class="row">
+        <!-- CÓDIGO ACTIVO -->
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Código de activo</label>
+            <input class="form-control"
+                   name="CodigoActivo"
+                   placeholder="PC-005"
+                   required />
+        </div>
 
-<div class="mb-4">
-    <h2 class="fw-bold mb-0">Nueva computadora</h2>
-    <small class="text-muted">Registrar un nuevo equipo</small>
-</div>
-
-<div class="card shadow-sm">
-    <div class="card-body">
-
-        <form asp-controller="Computadoras" asp-action="Nuevo" method="post">
-
-            <div class="row">
-                <!-- ACTIVO -->
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Activo</label>
-                    <input class="form-control"
-                           name="CodigoActivo"
-                           placeholder="PC-005"
-                           required />
-                </div>
-
-                <!-- USUARIO ASIGNADO -->
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Usuario asignado</label>
-                    <input class="form-control"
-                           name="NombreEmpleado"
-                           placeholder="Opcional" />
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- MARCA -->
-                <div class="col-md-4 mb-3">
-                    <label class="form-label">Marca</label>
-                    <input class="form-control"
-                           name="Marca"
-                           required />
-                </div>
-
-                <!-- MODELO -->
-                <div class="col-md-4 mb-3">
-                    <label class="form-label">Modelo</label>
-                    <input class="form-control"
-                           name="Modelo"
-                           required />
-                </div>
-
-                <!-- ESTADO -->
-                <div class="col-md-4 mb-3">
-                    <label class="form-label">Estado</label>
-                    <select class="form-select" name="Estado" required>
-                        <option value="Operativa">Operativa</option>
-                        <option value="Mantenimiento">Mantenimiento</option>
-                        <option value="Disponible">Disponible</option>
-                        <option value="Fuera de servicio">Fuera de servicio</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-end gap-2">
-                <a asp-controller="Computadoras"
-                   asp-action="Index"
-                   class="btn btn-outline-secondary">
-                    Cancelar
-                </a>
-
-                <button type="submit" class="btn btn-primary">
-                    Guardar
-                </button>
-            </div>
-
-        </form>
+        <!-- SERIE -->
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Serie</label>
+            <input class="form-control"
+                   name="Serie"
+                   placeholder="Número de serie (opcional)" />
+        </div>
     </div>
-</div>
+
+    <div class="row">
+        <!-- MARCA -->
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Marca</label>
+            <input class="form-control"
+                   name="Marca"
+                   required />
+        </div>
+
+        <!-- MODELO -->
+        <div class="col-md-6 mb-3">
+            <label class="form-label">Modelo</label>
+            <input class="form-control"
+                   name="Modelo"
+                   required />
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-end gap-2">
+        <a asp-controller="Computadoras"
+           asp-action="Index"
+           class="btn btn-outline-secondary">
+            Cancelar
+        </a>
+
+        <button type="submit" class="btn btn-primary">
+            Guardar
+        </button>
+    </div>
+</form>

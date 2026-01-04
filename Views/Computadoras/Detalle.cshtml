@@ -4,32 +4,58 @@
     ViewData["Title"] = "Detalle Computadora";
 }
 
-<h2 class="fw-bold mb-3">
-    Equipo: @Model.CodigoActivo
-</h2>
+<h2 class="mb-4">Detalle de computadora</h2>
 
-<div class="card shadow-sm">
+<div class="card">
     <div class="card-body">
 
-        <div class="row mb-2">
-            <div class="col-sm-4 fw-bold">Marca:</div>
-            <div class="col-sm-8">@Model.Marca</div>
-        </div>
+        <p><strong>Código activo:</strong> @Model.CodigoActivo</p>
+        <p><strong>Marca:</strong> @Model.Marca</p>
+        <p><strong>Modelo:</strong> @Model.Modelo</p>
+        <p><strong>Serie:</strong> @Model.Serie</p>
 
-        <div class="row mb-2">
-            <div class="col-sm-4 fw-bold">Modelo:</div>
-            <div class="col-sm-8">@Model.Modelo</div>
-        </div>
+        <hr />
 
-        <div class="row mb-2">
-            <div class="col-sm-4 fw-bold">Serie:</div>
-            <div class="col-sm-8">@Model.Serie</div>
-        </div>
+        <p>
+            <strong>Usuario asignado:</strong>
+            @if (string.IsNullOrEmpty(Model.CedulaUsuario))
+            {
+                <span class="text-muted">Sin asignar</span>
+            }
+            else
+            {
+                @Model.NombreUsuarioAsignado
+            }
+        </p>
 
-        <div class="text-end">
-            <a asp-action="Index" class="btn btn-outline-secondary">
+        <div class="d-flex justify-content-between mt-4">
+            <a asp-action="Index" class="btn btn-secondary">
                 Volver
             </a>
+
+            @if (string.IsNullOrEmpty(Model.CedulaUsuario))
+            {
+                <a asp-action="Asignar"
+                   asp-route-id="@Model.IdComputadora"
+                   class="btn btn-primary">
+                    Asignar a usuario
+                </a>
+            }
+            else
+            {
+                <form asp-action="Desasignar"
+                      asp-route-id="@Model.IdComputadora"
+                      method="post"
+                      class="d-inline">
+                    <button type="submit"
+                            class="btn btn-outline-danger"
+                            onclick="return confirm('¿Deseas desasignar esta computadora?');">
+                        Desasignar
+                    </button>
+                </form>
+            }
         </div>
+
     </div>
 </div>
+

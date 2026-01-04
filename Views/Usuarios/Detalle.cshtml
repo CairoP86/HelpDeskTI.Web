@@ -1,0 +1,58 @@
+﻿@model HelpDeskTI.Web.Models.Usuario
+
+<h2 class="mb-4">Detalle de usuario</h2>
+
+<div class="card">
+    <div class="card-body">
+
+        <p><strong>Nombre:</strong> @Model.Nombre</p>
+        <p><strong>Rol:</strong> @Model.Rol</p>
+
+        <p>
+            <strong>Estado:</strong>
+            @if (Model.Activo)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-secondary">Inactivo</span>
+            }
+        </p>
+
+        <p>
+            <strong>Departamento:</strong>
+            @(Model.NombreDepartamento ?? "—")
+        </p>
+
+        <hr />
+
+        <p>
+            <strong>Computadora asignada:</strong>
+            @if (string.IsNullOrEmpty(Model.CodigoComputadora))
+            {
+                <span class="text-muted">Sin computadora asignada</span>
+            }
+            else
+            {
+                @Model.CodigoComputadora
+            }
+        </p>
+
+        <div class="d-flex justify-content-between mt-4">
+            <a asp-action="Index" class="btn btn-secondary">
+                Volver
+            </a>
+
+            @if (!string.IsNullOrEmpty(Model.CodigoComputadora))
+            {
+                <a asp-controller="Computadoras"
+                   asp-action="Index"
+                   class="btn btn-outline-primary">
+                    Ver computadora
+                </a>
+            }
+        </div>
+
+    </div>
+</div>

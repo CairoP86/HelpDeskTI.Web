@@ -45,6 +45,17 @@
                                 <a class="nav-link" asp-controller="Departamentos" asp-action="Index">Departamentos</a>
                             </li>
                         }
+                        @if (User.IsInRole("Admin"))
+{
+                            <li class="nav-item">
+                            <a class="nav-link"
+                              asp-controller="Reportes"
+                              asp-action="Index">
+                             Reportes
+                             </a>
+                        </li>
+}
+
 
                         @* ===== ADMIN / TECNICO ===== *@
                         @if (User.IsInRole("Admin") || User.IsInRole("Tecnico"))

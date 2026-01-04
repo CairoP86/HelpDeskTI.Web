@@ -1,0 +1,38 @@
+﻿@model List<HelpDeskTI.Web.Models.Software>
+
+<h3>
+    Software instalado en el equipo:
+    <span class="text-primary">@ViewBag.CodigoActivo</span>
+</h3>
+
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Versión</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Nombre</td>
+                <td>@s.Version</td>
+                <td>
+                    <form asp-action="Quitar" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="idSoftware" value="@s.IdSoftware" />
+                        <input type="hidden" name="idComputadora" value="@ViewBag.IdComputadora" />
+                        <button class="btn btn-sm btn-danger">
+                            Quitar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

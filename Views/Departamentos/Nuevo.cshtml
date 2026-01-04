@@ -19,22 +19,7 @@
                        required />
             </div>
 
-            <!-- ENCARGADO -->
-            <div class="mb-3">
-                <label class="form-label">Encargado</label>
-                <select class="form-select"
-                        name="CedulaEncargado">
-                    <option value="">Seleccionar usuario</option>
-
-                    @* Lista cargada desde el controller *@
-                    @foreach (var u in ViewBag.Usuarios as List<HelpDeskTI.Web.Models.Usuario>)
-                    {
-                        <option value="@u.Cedula">
-                            @u.Nombre @u.Apellido1
-                        </option>
-                    }
-                </select>
-            </div>
+         
 
             <div class="text-end">
                 <a asp-controller="Departamentos"

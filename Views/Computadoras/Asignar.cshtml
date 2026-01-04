@@ -1,0 +1,52 @@
+﻿@model HelpDeskTI.Web.Models.Computadora
+
+@{
+    ViewData["Title"] = "Asignar computadora";
+    var usuarios = ViewBag.Usuarios as List<Usuario>;
+}
+
+<h2 class="fw-bold mb-3">
+    Asignar computadora @Model.CodigoActivo
+</h2>
+
+<form asp-action="Asignar" method="post">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" name="idComputadora" value="@Model.IdComputadora" />
+
+    <div class="mb-3">
+        <label class="form-label">Usuario asignado</label>
+
+        @if (usuarios == null || !usuarios.Any())
+        {
+            <div class="alert alert-warning">
+                No hay usuarios disponibles para asignar
+            </div>
+        }
+        else
+        {
+            <select class="form-select" name="cedulaUsuario" required>
+                <option value="">Seleccione un usuario</option>
+
+                @foreach (var u in usuarios)
+                {
+                    <option value="@u.Cedula">
+                        @u.Nombre
+                    </option>
+                }
+            </select>
+        }
+    </div>
+
+    <div class="d-flex justify-content-end gap-2">
+        <a asp-action="Detalle"
+           asp-route-id="@Model.IdComputadora"
+           class="btn btn-outline-secondary">
+            Cancelar
+        </a>
+
+        <button type="submit" class="btn btn-primary">
+            Guardar asignación
+        </button>
+    </div>
+</form>

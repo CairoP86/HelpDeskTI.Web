@@ -4,41 +4,57 @@
     ViewData["Title"] = "Nuevo Usuario";
 }
 
-<h2>Nuevo usuario</h2>
+<h2>Nuevo Usuario</h2>
 
-<form asp-action="Nuevo" method="post" class="card p-4 shadow-sm">
+<form asp-action="Nuevo" method="post">
+    @Html.AntiForgeryToken()
 
     <div class="mb-3">
-        <label class="form-label">Cédula</label>
-        <input asp-for="Cedula" class="form-control" required />
+        <label>Cédula</label>
+        <input asp-for="Cedula" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Nombre</label>
-        <input asp-for="Nombre" class="form-control" required />
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Apellido 1</label>
-        <input asp-for="Apellido1" class="form-control" required />
+        <label>Primer Apellido</label>
+        <input asp-for="Apellido1" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Apellido 2</label>
+        <label>Segundo Apellido</label>
         <input asp-for="Apellido2" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Rol</label>
+        <label>Rol</label>
         <select asp-for="Rol" class="form-select">
-            <option>Empleado</option>
-            <option>Tecnico</option>
-            <option>TI</option>
+            <option value="">Seleccione</option>
+            <option value="Admin">Admin</option>
+            <option value="Tecnico">Tecnico</option>
+            <option value="Usuario">Usuario</option>
         </select>
     </div>
 
-    <div class="text-end">
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-        <button class="btn btn-primary">Guardar</button>
+    <div class="mb-3">
+        <label class="form-label">Departamento</label>
+        <select asp-for="IdDepartamento" class="form-select">
+            <option value="">Seleccione un departamento</option>
+            @foreach (var d in (List<Departamento>)ViewBag.Departamentos)
+            {
+                <option value="@d.IdDepartamento">@d.Nombre</option>
+            }
+        </select>
     </div>
+
+
+    <div class="mb-3">
+        <label>Contraseña</label>
+        <input type="password" name="clave" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
